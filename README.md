@@ -1,47 +1,63 @@
 # 🧮 Kalkulator Sederhana (Tkinter)
 
-## 📌 Deskripsi Tugas
+## 📌 Deskripsi
 
-Program ini merupakan implementasi aplikasi kalkulator sederhana berbasis GUI menggunakan Python dan library Tkinter.
-Aplikasi ini dibuat untuk memenuhi tugas praktik dengan tujuan memahami konsep dasar:
-
-* Graphical User Interface (GUI)
-* Event handling
-* Validasi input
-* Operasi aritmatika dasar
+Program ini merupakan aplikasi kalkulator sederhana berbasis Graphical User Interface (GUI) menggunakan Python dan library Tkinter.
+Aplikasi ini dibuat untuk memenuhi tugas praktik dengan tujuan memahami konsep dasar pemrograman GUI dan event-driven programming.
 
 ---
 
 ## 🎯 Tujuan
 
-* Mengimplementasikan GUI sederhana menggunakan Tkinter
-* Menggunakan event handling pada tombol
+Tujuan dari pembuatan program ini adalah:
+
+* Mengimplementasikan GUI menggunakan Tkinter
+* Menerapkan event handling pada aplikasi
 * Melakukan validasi input dari pengguna
-* Menampilkan hasil perhitungan secara real-time
+* Mengimplementasikan operasi aritmatika dasar
 
 ---
 
-## ⚙️ Spesifikasi Program
+## ⚙️ Fitur Program
 
 Program memiliki fitur sebagai berikut:
 
-* Dua input (Entry) untuk angka pertama dan kedua
-* Empat tombol operasi:
+### 🔢 Input
 
-  * Penjumlahan (+)
-  * Pengurangan (-)
-  * Perkalian (*)
-  * Pembagian (/)
-* Label untuk menampilkan hasil perhitungan
-* Validasi input:
+* Dua field input untuk angka pertama dan kedua
 
-  * Menampilkan pesan error jika input bukan angka
-* Event handling:
+### ➕ Operasi
 
-  * Klik tombol langsung menghitung hasil
-* Bonus:
+* Penjumlahan (+)
+* Pengurangan (-)
+* Perkalian (*)
+* Pembagian (/)
 
-  * Mendukung shortcut keyboard (Enter)
+### 🖥️ Output
+
+* Menampilkan hasil perhitungan secara langsung
+* Menampilkan operasi yang digunakan
+
+### ⚠️ Validasi
+
+* Menampilkan pesan error jika input kosong
+* Menampilkan pesan error jika input bukan angka
+* Menangani pembagian dengan nol
+
+### ⌨️ Event Handling
+
+* Klik tombol langsung menghitung hasil
+* Tekan tombol **Enter** untuk menghitung dengan operasi terakhir
+* Mendukung input dari keyboard (+, -, *, /)
+
+### 🔄 Fitur Tambahan
+
+* Tombol **Reset** untuk menghapus input dan hasil
+* Hasil otomatis dihapus saat user mengetik input baru
+* Format hasil:
+
+  * Bilangan bulat ditampilkan tanpa desimal
+  * Bilangan desimal tetap ditampilkan
 
 ---
 
@@ -54,60 +70,59 @@ Program memiliki fitur sebagai berikut:
 
 ## ▶️ Cara Menjalankan Program
 
-1. Pastikan Python sudah terinstall di komputer
+1. Pastikan Python sudah terinstall
 2. Jalankan file program dengan perintah:
 
    ```bash
    python kalkulator_sederhana.py
    ```
-3. Masukkan dua angka pada kolom input
-4. Klik tombol operasi yang diinginkan
+3. Masukkan angka pada kedua input
+4. Pilih operasi atau gunakan keyboard
 
 ---
 
-## 🧠 Penjelasan Program
+## 🧠 Penjelasan Singkat Program
 
-### 1. Input Data
+### 1. Input & Validasi
 
-Program menggunakan widget `Entry` untuk menerima input dari pengguna.
+Program mengambil input dari user menggunakan widget `Entry`, kemudian melakukan validasi:
 
-### 2. Validasi Input
+* Input tidak boleh kosong
+* Input harus berupa angka
 
-Input divalidasi menggunakan `try-except` untuk memastikan data berupa angka.
+### 2. Proses Perhitungan
+
+Program menggunakan percabangan (`if-elif`) untuk menentukan operasi yang dipilih.
 
 ### 3. Event Handling
 
-Setiap tombol memiliki event handler yang akan memanggil fungsi perhitungan.
+Setiap tombol memiliki fungsi yang akan langsung menjalankan perhitungan.
+Selain itu, program juga menangani input dari keyboard menggunakan event binding.
 
-### 4. Proses Perhitungan
+### 4. Manajemen State
 
-Program menggunakan percabangan (`if-elif`) untuk menentukan operasi matematika.
-
-### 5. Output
-
-Hasil perhitungan ditampilkan pada label.
-Jika hasil berupa bilangan bulat, maka ditampilkan tanpa desimal.
+Program menyimpan operasi terakhir yang digunakan agar tombol **Enter** dapat menjalankan operasi yang sama.
 
 ---
 
 ## ⚠️ Penanganan Error
 
-Program menangani beberapa kondisi error, seperti:
+Program menangani beberapa kondisi error:
 
-* Input bukan angka
 * Input kosong
+* Input bukan angka
 * Pembagian dengan nol
 
 ---
 
 ## 📚 Kesimpulan
 
-Melalui tugas ini, dapat dipahami bagaimana:
+Melalui pembuatan program ini, dapat dipahami:
 
-* Membuat aplikasi GUI sederhana
-* Mengimplementasikan event-driven programming
-* Melakukan validasi input pengguna
-* Mengelola alur logika program dengan benar
+* Cara membuat aplikasi GUI sederhana
+* Konsep event-driven programming
+* Pentingnya validasi input
+* Pengelolaan alur logika program yang tepat
 
 ---
 
@@ -115,4 +130,4 @@ Melalui tugas ini, dapat dipahami bagaimana:
 
 Nama: Aji Nugroho
 Program Studi: S1 Informatika
-Mata Kuliah: Algoritma dan Pemrograma II
+Mata Kuliah: Algoritma dan Pemrograman II
